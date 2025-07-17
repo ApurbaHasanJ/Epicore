@@ -75,7 +75,7 @@ const config = {
         },
         // Custom colors from the template image
         "primary-beige": "#e5d6cb",
-        "primary-yellow": "#eab308", // yellow-500
+        "primary-yellow": "#eab308",
         "dark-charcoal": "#2E3236",
         "black-custom": "#000000",
         "white-custom": "#FFFFFF",
