@@ -69,8 +69,8 @@ export default function ServicesSection() {
               key={index}
               whileHover="hover"
               className="group hover:scale-[1.03] flex flex-col items-center p-5 py-8 md:py-11 md:p-8 space-y-4 shadow-sm bg-white transition-all duration-300 cursor-pointer hover:bg-yellow-400">
-              <div className="bg-white rounded-full p-4 shadow transition-all duration-200 group-hover:scale-105 group-hover:shadow-lg">
-                <item.icon className="size-7 md:size-10 text-secondary group-hover:text-yellow-500" />
+              <div className="bg-white rounded-full p-4 shadow transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg">
+                <item.icon className="size-7 md:size-10 text-secondary group-hover:text-yellow-500 transition-all duration-300" />
               </div>
               <h3 className="text-xl font-semibold text-secondary">
                 {item.title}
