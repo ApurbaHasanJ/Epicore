@@ -57,9 +57,7 @@ export default function HeroSection() {
           <ImageDesign />
 
           <div className="space-y-7 max-w-lg">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
-              We Create Websites
-            </h1>
+            <h1 className="section-header">We Create Websites</h1>
             <p className="text-lg md:text-xl text-secondary">
               Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
