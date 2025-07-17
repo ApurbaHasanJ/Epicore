@@ -1,8 +1,11 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Button } from "@/src/components/ui/button"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import { Button, buttonVariants } from "@/src/components/ui/button";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { cn } from "@/src/lib/utils";
+import heroImg from "../../assets/hero-img.jpg";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -17,48 +20,84 @@ const fadeInAnimationVariants = {
       duration: 0.6,
     },
   },
-}
+};
+
+const ImageDesign = () => (
+  <div className="xl:hidden block pb-7">
+    {/* Decorative badge */}
+    <span className="absolute top-5 left-5 bg-gradient-to-r from-primary to-black text-white text-xs font-semibold px-4 py-1 rounded-full shadow-md z-10">
+      Featured
+    </span>
+    {/* Image */}
+    <Image
+      src={heroImg}
+      width={320}
+      height={220}
+      alt="Digital devices displaying website designs"
+      className="w-full h-full object-contain rounded-xl overflow-hidden"
+      placeholder="blur"
+    />
+  </div>
+);
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative overflow-hidden py-16 md:py-24 lg:py-32 bg-[#e5d6cb]">
+    <section
+      id="home"
+      className="bg-[#e5d6cb] flex items-center justify-center">
       <motion.div
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInAnimationVariants}
-        className="container mx-auto px-4 md:px-8 grid lg:grid-cols-2 gap-8 items-center relative z-10"
-      >
-        <div className="space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
-            We Create Websites
-          </h1>
-          <p className="text-lg md:text-xl text-secondary max-w-lg">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
-          </p>
-          <p className="text-sm text-secondary">Image from Freepik</p>
-          <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
-            <Button className="bg-black-custom text-white-custom px-8 py-6 text-lg rounded-none hover:bg-secondary">
+        className="container relative min-h-svh flex max-xl:flex-col items-center justify-between gap-8 z-10 pt-16 lg:pt-28">
+        {/* left col */}
+        <div className="max-w-4xl relative w-full bg-white p-8 py-16">
+          {/*design for lg and below */}
+          <ImageDesign />
+
+          <div className="space-y-7 max-w-lg">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
+              We Create Websites
+            </h1>
+            <p className="text-lg md:text-xl text-secondary">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt.
+            </p>
+            <p className="text-sm text-secondary font-medium">
+              Image from{" "}
+              <Link
+                href="https://freepik.com"
+                className="underline underline-offset-2">
+                Freepik
+              </Link>
+            </p>
+            <Link
+              href="#portfolio"
+              className={cn(buttonVariants({ size: "lg" }))}>
               VIEW PORTFOLIO
-            </Button>
-          </motion.div>
+            </Link>
+          </div>
         </div>
-        <div className="relative flex justify-center lg:justify-end min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
-          <Image
-            src="/placeholder.svg?height=500&width=600"
-            width={600}
-            height={500}
-            alt="Digital devices displaying website designs"
-            className="relative z-10 object-contain"
-          />
+
+        {/* right cols for xl and up */}
+        <div className="hidden xl:block">
           {/* Abstract shapes */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary transform translate-x-1/4 -translate-y-1/4 z-0" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-gray-300 transform -translate-x-1/4 translate-y-1/4 z-0" />
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gray-400 transform -rotate-45 z-0" />
-          <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-gray-200 transform -translate-x-1/2 -translate-y-1/2 rotate-45 opacity-50 z-0" />
+          <div className="absolute z-0 right-8 top-2/4 transform -translate-y-[60%] w-[450px] h-[600px] bg-primary" />
+          <div className="bg-gray-100 absolute z-10 right-52 top-1/2 transform -translate-y-[60%] w-[450px] h-[450px]" />
+          <div className="absolute z-10 right-14 top-1/2 transform -translate-y-[82%] w-[540px] h-[400px]">
+            <Image
+              src={heroImg}
+              width={540}
+              height={400}
+              alt="Digital devices displaying website designs"
+              className="w-full h-full"
+              placeholder="blur"
+            />
+          </div>
         </div>
       </motion.div>
     </section>
-  )
+  );
 }

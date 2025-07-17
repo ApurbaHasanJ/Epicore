@@ -43,7 +43,7 @@ export default function Header() {
           ))}
         </div>
 
-        <Link href="#contact" className={cn(buttonVariants(), "bg-black-custom text-white-custom hover:bg-secondary")}>
+        <Link href="#contact" className={cn(buttonVariants())}>
           Contact
         </Link>
       </div>
