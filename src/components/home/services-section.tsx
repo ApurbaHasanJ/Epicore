@@ -55,7 +55,7 @@ export default function ServicesSection() {
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInAnimationVariants}
-        className="container mx-auto px-4 md:px-8 text-center space-y-12">
+        className="container text-center space-y-12">
         <div className="space-y-4">
           <SectionHeader
             tittle="Epic design and engineering"
@@ -68,7 +68,7 @@ export default function ServicesSection() {
             <motion.div
               key={index}
               whileHover="hover"
-              className="group hover:scale-[1.03] flex flex-col items-center p-8 space-y-4 rounded-lg shadow-md bg-white transition-all duration-300 cursor-pointer hover:bg-yellow-400">
+              className="group hover:scale-[1.03] flex flex-col items-center p-5 py-8 md:py-11 md:p-8 space-y-4 shadow-md bg-white transition-all duration-300 cursor-pointer hover:bg-yellow-400">
               <div className="bg-white rounded-full p-4 shadow transition-all duration-200 group-hover:scale-105 group-hover:shadow-lg">
                 <item.icon className="size-7 md:size-10 text-secondary group-hover:text-yellow-500" />
               </div>
