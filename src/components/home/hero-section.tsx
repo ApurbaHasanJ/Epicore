@@ -52,7 +52,7 @@ export default function HeroSection() {
         variants={fadeInAnimationVariants}
         className="container relative min-h-svh flex max-xl:flex-col items-center justify-between gap-8 z-10 pt-16 lg:pt-28">
         {/* left col */}
-        <div className="max-w-4xl relative w-full bg-white p-8 py-16">
+        <div className="xl:max-w-4xl relative w-full bg-white p-8 py-16">
           {/*design for lg and below */}
           <ImageDesign />
 
