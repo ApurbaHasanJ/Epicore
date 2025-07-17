@@ -63,12 +63,12 @@ export default function ServicesSection() {
         ut aliquip ex ea commodo consequat."
           />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-8">
           {services.map((item, index) => (
             <motion.div
               key={index}
               whileHover="hover"
-              className="group hover:scale-[1.03] flex flex-col items-center p-5 py-8 md:py-11 md:p-8 space-y-4 shadow-md bg-white transition-all duration-300 cursor-pointer hover:bg-yellow-400">
+              className="group hover:scale-[1.03] flex flex-col items-center p-5 py-8 md:py-11 md:p-8 space-y-4 shadow-sm bg-white transition-all duration-300 cursor-pointer hover:bg-yellow-400">
               <div className="bg-white rounded-full p-4 shadow transition-all duration-200 group-hover:scale-105 group-hover:shadow-lg">
                 <item.icon className="size-7 md:size-10 text-secondary group-hover:text-yellow-500" />
               </div>
