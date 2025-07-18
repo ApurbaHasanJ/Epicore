@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import Header from "@/src/components/shared/header"
-import MobileBottomNav from "@/src/components/shared/mobile-bottom-nav"
-import Footer from "@/src/components/shared/footer"
-import HeroSection from "@/src/components/home/hero-section"
-import ServicesSection from "@/src/components/home/services-section"
-import PortfolioSection from "@/src/components/home/portfolio-section"
-import BrandValuesSection from "@/src/components/home/brand-values-section"
-import ConstructionProjectsSection from "@/src/components/home/construction-projects-section"
-import WhatWeDoSection from "@/src/components/home/what-we-do-section"
-import BrandingSection from "@/src/components/home/branding-section"
-import DigitalExperiencesSection from "@/src/components/home/digital-experiences-section"
-import ContactSection from "@/src/components/home/contact-section"
+import Header from "@/src/components/shared/header";
+import MobileBottomNav from "@/src/components/shared/mobile-bottom-nav";
+import Footer from "@/src/components/shared/footer";
+import HeroSection from "@/src/components/home/hero-section";
+import ServicesSection from "@/src/components/home/services-section";
+import PortfolioSection from "@/src/components/home/portfolio-section";
+import BrandValuesSection from "@/src/components/home/brand-values-section";
+import ConstructionProjectsSection from "@/src/components/home/construction-projects-section";
+import WhatWeDoSection from "@/src/components/home/what-we-do-section";
+import BrandingSection from "@/src/components/home/branding-section";
+import DigitalExperiencesSection from "@/src/components/home/digital-experiences-section";
+import ContactSection from "@/src/components/home/contact-section";
 
 export default function LandingPage() {
   return (
@@ -28,10 +28,10 @@ export default function LandingPage() {
         <BrandingSection />
         <DigitalExperiencesSection />
         <ContactSection />
+        <Footer />
       </main>
 
       <MobileBottomNav />
-      <Footer />
     </div>
-  )
+  );
 }
