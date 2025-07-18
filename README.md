@@ -2,6 +2,8 @@
 
 Epicore is a modern, responsive web application designed with a mobile-first, app-like user experience. It features beautiful UI sections, smooth animations, and a navigation system inspired by mobile apps.
 
+[Live Demo](https://epicore.vercel.app/)
+
 ## Features & Sections
 
 - **Hero Section**: Eye-catching introduction with responsive image and headline, optimized for all device sizes.
