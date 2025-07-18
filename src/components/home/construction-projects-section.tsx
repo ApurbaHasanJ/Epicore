@@ -53,7 +53,7 @@ export default function ConstructionProjectsSection() {
         <div />
 
         {/* right col */}
-        <div className="space-y-6 max-md:space-y-4 bg-white-custom p-4 sm:p-8 md:p-12 shadow-lg">
+        <div className="space-y-6 max-md:space-y-4 max-md:bg-white-custom p-4 sm:p-8 md:p-12 max-md:shadow-lg">
           <h2 className="section-header md:text-secondary">
             Construction and <br /> renovation projects
           </h2>
