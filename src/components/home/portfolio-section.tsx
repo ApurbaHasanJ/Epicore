@@ -57,7 +57,7 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="py-16 md:py-24 lg:py-32 bg-slate-700 text-white-custom">
+      className="py-16 md:py-24 lg:py-32 bg-black text-white-custom">
       <motion.div
         initial="initial"
         whileInView="animate"
