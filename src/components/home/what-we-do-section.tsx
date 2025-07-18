@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -15,55 +15,77 @@ const fadeInAnimationVariants = {
       duration: 0.6,
     },
   },
-}
+};
+
+const whatWeDoData = [
+  {
+    title: "Strategy.",
+    items: [
+      "Analytics and Research",
+      "Interactive Workshops",
+      "Brand Strategy",
+      "Content Strategy",
+      "Digital Strategy",
+      "Conversion Rate Optimization",
+    ],
+  },
+  {
+    title: "Design.",
+    items: [
+      "Creative Direction",
+      "Brand Guides",
+      "Prototypes",
+      "UI / UX & Web Design",
+      "Visual Asset Creation",
+      "Motion Design",
+    ],
+  },
+  {
+    title: "Development.",
+    items: [
+      "System Architecture Design",
+      "Full-Stack Development",
+      "3rd Party Integrations",
+      "Performance Optimization",
+      "WordPress Development",
+      "Shopify Development",
+    ],
+  },
+];
 
 export default function WhatWeDoSection() {
   return (
-    <section id="what-we-do" className="py-16 md:py-24 lg:py-32 bg-black-custom text-white-custom">
+    <section
+      id="what-we-do"
+      className="py-16 md:py-24 lg:py-32 bg-black-custom text-white-custom">
       <motion.div
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInAnimationVariants}
-        className="container mx-auto px-4 md:px-8 text-center space-y-12"
-      >
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">What We Do</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Strategy.</h3>
-            <ul className="space-y-2 text-lg">
-              <li>Analytics and Research</li>
-              <li>Interactive Workshops</li>
-              <li>Brand Strategy</li>
-              <li>Content Strategy</li>
-              <li>Digital Strategy</li>
-              <li>Conversion Rate Optimization</li>
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Design.</h3>
-            <ul className="space-y-2 text-lg">
-              <li>Creative Direction</li>
-              <li>Brand Guides</li>
-              <li>Prototypes</li>
-              <li className="underline">UI / UX & Web Design</li>
-              <li>Visual Asset Creation</li>
-              <li>Motion Design</li>
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Development.</h3>
-            <ul className="space-y-2 text-lg">
-              <li>System Architecture Design</li>
-              <li>Full-Stack Development</li>
-              <li className="underline">3rd Party Integrations</li>
-              <li>Performance Optimization</li>
-              <li>WordPress Development</li>
-              <li>Shopify Development</li>
-            </ul>
-          </div>
+        className="container mx-auto px-4 md:px-8 text-center space-y-12">
+        <h2 className="section-header text-primary md:pb-4 lg:pb-10">
+          What We Do
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 text-left">
+          {whatWeDoData.map((col, i) => (
+            <div className="space-y-6" key={col.title}>
+              <h3 className="text-lg md:text-2xl text-primary/85">
+                {col.title}
+              </h3>
+              <ul className="space-y-2 text-lg">
+                {col.items.map((item) => (
+                  <li
+                    key={item}
+                    className="text-slate-50/60 max-sm:text-sm hover:underline hover:underline-offset-2 transition-all">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </motion.div>
     </section>
-  )
+  );
 }
