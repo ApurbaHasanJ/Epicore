@@ -69,7 +69,7 @@ export default function WhatWeDoSection() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 text-left">
           {whatWeDoData.map((col, i) => (
-            <div className="space-y-6" key={col.title}>
+            <div className="space-y-3 md:space-y-6" key={col.title}>
               <h3 className="text-lg md:text-2xl text-primary/85">
                 {col.title}
               </h3>
