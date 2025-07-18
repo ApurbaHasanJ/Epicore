@@ -11,21 +11,6 @@ import corporateImg from "../../assets/portfolio/corporate.jpg";
 import digitalProductImg from "../../assets/portfolio/digital-product.jpg";
 import Link from "next/link";
 
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.1,
-      duration: 0.6,
-    },
-  },
-};
-
 const portfolioItems = [
   {
     src: webDesignImg,
@@ -58,12 +43,7 @@ export default function PortfolioSection() {
     <section
       id="portfolio"
       className="py-16 md:py-24 lg:py-32 bg-black text-white-custom">
-      <motion.div
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInAnimationVariants}
-        className="container text-center space-y-12">
+      <div className="container text-center space-y-12">
         <div className="space-y-4">
           <SectionHeader
             dark={true}
@@ -74,9 +54,8 @@ export default function PortfolioSection() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-8">
           {portfolioItems.map((item, index) => (
-            <motion.div
+            <div
               key={index}
-              whileHover="hover"
               className="group hover:scale-[1.03] flex flex-col items-center bg-white-custom text-secondary rounded-lg overflow-hidden shadow-sm transition-all duration-300 cursor-pointer hover:bg-yellow-400">
               <div className="w-full h-full flex justify-center items-center bg-white rounded-b-none rounded-t-lg overflow-hidden">
                 <Image
@@ -90,7 +69,7 @@ export default function PortfolioSection() {
               <h3 className="text-sm sm:text-base md:text-xl font-semibold p-4 text-secondary">
                 {item.title}
               </h3>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -103,7 +82,7 @@ export default function PortfolioSection() {
             Freepik
           </Link>
         </p>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -24,7 +24,7 @@ export default function Header() {
       className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-sm border-b border-secondary/10 shadow-sm"
     >
       <div className="container flex items-center justify-between py-4">
-        <div className="font-logo text-secondary font-bold text-lg md:text-xl xl:text-2xl tracking-wider">
+        <div className="font-logo text-secondary font-bold text-xl xl:text-2xl tracking-wider">
           {COMPANY_NAME}
         </div>
 
