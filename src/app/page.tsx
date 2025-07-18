@@ -15,7 +15,7 @@ import ContactSection from "@/src/components/home/contact-section";
 
 export default function LandingPage() {
   return (
-    <div className="bg-[#e5d6cb] min-h-screen w-full overflow-hidden">
+    <div id="home" className="bg-[#e5d6cb] min-h-screen w-full overflow-hidden">
       <Header />
 
       <main className="flex-1 pt-20 pb-20 md:pb-0">

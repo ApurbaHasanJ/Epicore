@@ -43,7 +43,6 @@ const ImageDesign = () => (
 export default function HeroSection() {
   return (
     <section
-      id="home"
       className="bg-[#e5d6cb] flex items-center justify-center">
       <motion.div
         initial="initial"
