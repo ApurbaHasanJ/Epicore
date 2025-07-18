@@ -42,7 +42,7 @@ export default function DigitalExperiencesSection() {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInAnimationVariants}
         className="container mx-auto px-4 md:px-8 grid lg:grid-cols-2 gap-8 items-center relative z-10">
-        <div className="space-y-4 bg-white-custom p-8 md:p-12 shadow-lg">
+        <div className="space-y-4 bg-white-custom p-4 sm:p-8 md:p-12 shadow-lg">
           <SectionHeader
             tittle="Crafting digital experiences"
             desc="Join the elite ranks of sustained value creators"

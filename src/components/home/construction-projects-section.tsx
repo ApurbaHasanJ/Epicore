@@ -27,11 +27,19 @@ export default function ConstructionProjectsSection() {
     <section
       id="construction-projects"
       className="py-16 md:py-24 lg:py-32 relative bg-primary text-black md:text-secondary ">
+      {/* Diagonal stripes background */}
+      <div className="md:hidden absolute inset-0 overflow-hidden">
+        <div className="absolute -left-1/4 top-0 w-1/2 h-full bg-black-custom transform -skew-x-12 origin-top-left" />
+        <div className="absolute -left-1/4 top-0 w-1/2 h-full bg-white-custom transform -skew-x-12 origin-top-left translate-x-1/4" />
+        <div className="absolute -left-1/4 top-0 w-1/2 h-full bg-black-custom transform -skew-x-12 origin-top-left translate-x-2/4" />
+        <div className="absolute -left-1/4 top-0 w-1/2 h-full bg-white-custom transform -skew-x-12 origin-top-left translate-x-3/4" />
+      </div>
+
       <Image
         src={bgImg}
         alt="People working and design mockups"
         fill
-        className="object-cover max-md:opacity-10"
+        className="object-cover max-md:hidden"
         priority
       />
 
@@ -40,14 +48,14 @@ export default function ConstructionProjectsSection() {
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInAnimationVariants}
-        className="container mx-auto px-4 md:px-8 grid md:grid-cols-2 items-center relative z-10">
+        className="container grid md:grid-cols-2 items-center relative z-10">
         {/* left hidden col */}
         <div />
 
         {/* right col */}
-        <div className="space-y-6">
+        <div className="space-y-6 max-md:space-y-4 bg-white-custom p-4 sm:p-8 md:p-12 shadow-lg">
           <h2 className="section-header md:text-secondary">
-            Construction and renovation projects
+            Construction and <br /> renovation projects
           </h2>
           <p className="text-sm md:text-lg lg:text-xl max-w-3xl mx-auto">
             Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -66,7 +74,12 @@ export default function ConstructionProjectsSection() {
             </Link>
           </p>
 
-          <Link href="#contact" className={cn(buttonVariants(), "hover:scale-105 transition-transform duration-300")}>
+          <Link
+            href="#contact"
+            className={cn(
+              buttonVariants(),
+              "hover:scale-105 transition-transform duration-300"
+            )}>
             CONTACT US
           </Link>
         </div>
