@@ -83,6 +83,7 @@ export default function BrandingSection() {
               className="bg-white-custom p-6 shadow-md space-y-2 transition-transform hover:scale-105 duration-300">
               <h3 className="text-xl font-bold text-secondary">{item.title}</h3>
               <p className="text-secondary">{item.description}</p>
+             
               {/* free pik ref */}
               {item.showAttribution && (
                 <p className="text-sm text-secondary font-medium">
